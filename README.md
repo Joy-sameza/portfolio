@@ -1,4 +1,4 @@
-# CEF 344: Client Server an dWeb Denvelopment
+# CEF 344: Client Server and Web Development
 
 ## Author
 
