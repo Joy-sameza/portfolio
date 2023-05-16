@@ -60,7 +60,7 @@ header {
 
 /*This is what we call media query: here we define the css that will be apply for a
     specific screen*/
-@media screen and(max-width:1024px) {
+@media screen and(max-width:10px) {
     header {
         height: 68vh
     }
