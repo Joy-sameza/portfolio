@@ -112,6 +112,12 @@ img {
     display: block;
     width: 100%;
     object-fit: cover;
+    scale: 1.75;
+    position: absolute;
+    bottom: 120px;
+    left: 2rem;
+    width: 22rem;
+    aspect-ratio: 1.332;
 }
 
 @media screen and (max-width:1024px) {
