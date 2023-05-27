@@ -34,8 +34,8 @@ export default function About() {
               <small>80+ completed</small>
             </article>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dignissimos asperiores, officiis eius quisquam cum unde magnam voluptate delectus quam sed recusandae sint, totam, accusamus aut quibusdam libero nam rem.</p>
           </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dignissimos asperiores, officiis eius quisquam cum unde magnam voluptate delectus quam sed recusandae sint, totam, accusamus aut quibusdam libero nam rem.</p>
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
       </div>

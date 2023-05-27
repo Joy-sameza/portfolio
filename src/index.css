@@ -19,15 +19,27 @@
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
     --container-width-lg: 75%;
-    /*size of the container we are going to use on different*/
     --container-width-md: 86%;
-    /*screen size*/
     --container-width-sm: 90%;
     --transition: all 400ms ease;
 }
 
+/* :root {
+    --color-primary: hsl(66, 85%, 37%);
+    --color-bg: hsl(64, 88%, 10%);
+    --color-bg-variant: hsl(65, 87%, 21%);
+    --color-primary-variant: hsl(66, 85%, 45%);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease;
+} */
+
 html {
     scroll-behavior: smooth;
+    color-scheme: var(--color-primary);
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +72,6 @@ h1 {
 
 section {
     margin-top: 8rem;
-    height: 100vh;
 }
 
 section>h2,
