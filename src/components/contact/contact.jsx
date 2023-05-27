@@ -9,16 +9,16 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-      "service_5vuauza",
-      "template_fdnnl56",
+      "service_w3vaftv",
+      "template_pawjjp8",
       form.current,
-      "EmSdUNQzQuxkUqGWx"
+      "v7oHmSSeJxv575eu-"
     );
-    e.target.reset().then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
+    e.target.reset()
+      .then((result) => {
+        console.log(result.text)
+      })
+      .catch((error) => {
         console.log(error.text);
       }
     );
@@ -68,7 +68,7 @@ const Contact = () => {
             id="message"
             cols="30"
             rows="10"
-            placeholder="your message"
+            placeholder="Your Message"
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
