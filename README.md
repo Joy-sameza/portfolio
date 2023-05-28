@@ -16,4 +16,4 @@
 
 - Video implementation on mobile
 
-[![Implementation on mobile](./src/assets/Screenshot_2023-05-28-05-44-19-864_com.android.chrome.jpg)](https://github.com/Joy-sameza/portfolio/blob/main/src/assets/Screenrecorder-2023-05-28-05-45-05-909.mp4)
+[![Implementation on mobile](./src/assets/Screenshot_2023-05-28-05-44-19-864_com.android.chrome.jpg)](https://drive.google.com/file/d/1k7pG7C_e260hL-mfzTJUFUX1hMPZt6pK/view?usp=sharing)
