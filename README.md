@@ -16,4 +16,4 @@
 
 - Video implementation on mobile
 
-[![Video implementation on mobile](https://res.cloudinary.com/marcomontalbano/image/upload/v1685253165/video_to_markdown/images/google-drive--1k7pG7C_e260hL-mfzTJUFUX1hMPZt6pK-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1k7pG7C_e260hL-mfzTJUFUX1hMPZt6pK/view?usp=sharing "Video implementation on mobile")
+[![Implementation on mobile](./src/assets/Screenshot_2023-05-28-05-44-19-864_com.android.chrome.jpg)](https://drive.google.com/file/d/1k7pG7C_e260hL-mfzTJUFUX1hMPZt6pK/view?usp=sharing)
