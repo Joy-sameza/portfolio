@@ -8,6 +8,20 @@ header {
     height: 100%;
     text-align: center;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cta {
@@ -40,13 +54,18 @@ header {
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
     Height: 35rem;
-    position: absolute;
+    position: relative;
     left: calc(50% - 11rem);
     /*this help to place the image to the middle of screen*/
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+
+}
+.my_image img {
+    position: absolute;
+    bottom: 6rem;
 }
 
 .scroll__down {
