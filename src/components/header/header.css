@@ -10,6 +10,7 @@ header {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden;
 }
 
 .right {
@@ -86,6 +87,10 @@ header {
 }
 
 @media screen and(max-width:600px) {
+    div.container.header__container {
+        grid-template-columns: 1fr;
+    }
+
     header {
         height: 100vh
     }

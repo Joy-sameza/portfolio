@@ -11,7 +11,7 @@
     text-decoration: none;
 }
 
-:root {
+/* :root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
@@ -22,9 +22,14 @@
     --container-width-md: 86%;
     --container-width-sm: 90%;
     --transition: all 400ms ease;
-}
+    --swiper-theme-color: var(--color-primary) !important;
+} */
 
 /* :root {
+    --color-primary: #ffc5f4;
+} */
+
+:root {
     --color-primary: hsl(66, 85%, 37%);
     --color-bg: hsl(64, 88%, 10%);
     --color-bg-variant: hsl(65, 87%, 21%);
@@ -35,7 +40,8 @@
     --container-width-md: 86%;
     --container-width-sm: 90%;
     --transition: all 400ms ease;
-} */
+    --swiper-theme-color: var(--color-primary) !important;
+}
 
 html {
     scroll-behavior: smooth;
