@@ -51,6 +51,9 @@ html {
 ::-webkit-scrollbar {
     display: none;
 }
+::placeholder {
+    color: var(--color-primary);
+}
 
 body {
     font-family: 'Poppins', sans-serif;
