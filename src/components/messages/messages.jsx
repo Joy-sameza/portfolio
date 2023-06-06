@@ -3,20 +3,25 @@ import "./messages.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
+const config = {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+  },
+};
 async function postNewReview(data) {
-    const config = {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-      },
-    };
-    const response = await axios.post(
-      "http://localhost:3001/reviews/new-review",
-      data,
-      config
-    );
+  const response = await axios.post(
+    "http://localhost:3001/reviews/new-review",
+    data,
+    config
+  );
+  console.log(response);
+}
+
+async function getReviews() {
+    const response = await axios.get("http://localhost:3001/reviews", config);
     console.log(response);
-  }
+}
 
 export default function Messages() {
   const {
@@ -30,7 +35,9 @@ export default function Messages() {
   };
   return (
     <>
-      <section className="messages"></section>
+      <section className="messages">
+        <div className="message"></div>
+      </section>
       <section id="review">
         <h2 className="title">Review</h2>
         <div className="form">

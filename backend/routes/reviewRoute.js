@@ -22,4 +22,9 @@ router.post("/new-review", (req, res, next) => {
   next();
 });
 
+router.get('/', (req, res, next) => {
+  console.log("Request maid");
+  res.end("done");
+});
+
 module.exports = router;
