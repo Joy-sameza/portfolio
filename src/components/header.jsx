@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header id="home">
       <img src={blur} alt="" />
-      <img src={bgi} alt="" />
+      <img src={bgi} alt="" loading="lazy" />
       <nav>
         <a className="logo" tabIndex="1" href="#home">
           <svg

@@ -1,15 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Decoration from "./decoration";
-import { useForm } from "react-hook-form";
-import axios from "axios";
 import Pop from "./pop";
-
-const config = {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-  },
-};
 
 export default function Collab() {
   const [isOpen, setIsOpen] = useState(false);
