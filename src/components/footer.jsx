@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="social">
             <ul>
               <li>
-                <a href="https://instagram.com" target="blank">
+                <a href="https://www.instagram.com/christian_gueutsop/" target="blank">
                   Instagram
                 </a>
               </li>
@@ -34,7 +34,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com" target="blank">
+                <a href="https://www.linkedin.com/in/victorin-joy-kenfack-sameza-894366264/" target="blank">
                   LinkedIn
                 </a>
               </li>
