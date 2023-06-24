@@ -17,7 +17,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/reviews", reviewRouter);
+app.use("/msg", reviewRouter);
 
 // Connect to the database then listen for requests on PORT
 connect(process.env.MONGODB_URI)

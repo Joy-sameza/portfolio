@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const { reviewModel } = require("../models/reviewModels");
+const { msgModel } = require("../models/msgModels");
 
-router.post("/new-review", (req, res, next) => {
+router.post("/new-msg", (req, res, next) => {
   const dt = {
     name: req.body.name,
     email: req.body.email,
-    message: req.body.review,
+    message: req.body.msg,
   };
-  const newReview = new reviewModel(dt);
-  newReview
+  const newmsg = new msgModel(dt);
+  newmsg
     .save()
     .then(() => {
       console.log("SAved!!");
@@ -23,23 +23,23 @@ router.post("/new-review", (req, res, next) => {
 });
 
 router.get("/", (req, res, next) => {
-  const storedReviews = [];
-  reviewModel
+  const storedMsg = [];
+  msgModel
     .find()
-    .then((reviews) => {
-      reviews.forEach((review) => {
+    .then((msgs) => {
+      msgs.forEach((msg) => {
         const obj = {
-          name: review.name,
-          email: review.email,
-          message: review.message
-        }
-        storedReviews.push(obj);
+          name: msg.name,
+          email: msg.email,
+          message: msg.message,
+        };
+        storedMsg.push(obj);
       });
-      res.status(200).send(storedReviews);
+      res.status(200).send(storedMsg);
       console.log("Given review");
     })
     .catch((err) => console.error(err));
-    // next();
-  });
+  // next();
+});
 
 module.exports = router;
