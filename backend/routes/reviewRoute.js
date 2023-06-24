@@ -16,15 +16,30 @@ router.post("/new-review", (req, res, next) => {
       res.end("done");
     })
     .catch((err) => {
-        console.error(err);
-        res.end("error");
+      console.error(err);
+      res.end("error");
     });
   next();
 });
 
-router.get('/', (req, res, next) => {
-  console.log("Request maid");
-  res.end("done");
-});
+router.get("/", (req, res, next) => {
+  const storedReviews = [];
+  reviewModel
+    .find()
+    .then((reviews) => {
+      reviews.forEach((review) => {
+        const obj = {
+          name: review.name,
+          email: review.email,
+          message: review.message
+        }
+        storedReviews.push(obj);
+      });
+      res.status(200).send(storedReviews);
+      console.log("Given review");
+    })
+    .catch((err) => console.error(err));
+    // next();
+  });
 
 module.exports = router;

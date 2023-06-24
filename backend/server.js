@@ -24,4 +24,4 @@ connect(process.env.MONGODB_URI)
   .then(() =>
     app.listen(port, () => console.log(`Listening for request on port ${port}`))
   )
-  .catch((err) => console.error(`error listening on port ${port}`, err));
+  .catch((err) => console.error(`error listening on port ${port}\n`, err));

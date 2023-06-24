@@ -11,6 +11,24 @@
     text-decoration: none;
 }
 
+/*
+    https://realtimecolors.com
+
+    Dark theme
+    --text: #ecf7e9;
+    --background: #14250e;
+    --primary-button: #67bd47;
+    --secondary-button: #224017;
+    --accent: #5cac3e;
+
+    Light theme
+    --text: #1f0c05;
+    --background: #fbeee9;
+    --primary-button: #166a88;
+    --secondary-button: #ffffff;
+    --accent: #082530;
+*/
+
 /* :root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;

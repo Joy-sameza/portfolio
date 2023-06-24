@@ -38,7 +38,4 @@ h2.title {
     .form {
         width: 90%;
     }
-    button {
-        justify-self: stretch;
-    }
 }

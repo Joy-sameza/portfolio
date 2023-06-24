@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./navbar.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
-import { BiBook, BiMessageSquareDetail,BiBookmarkHeart } from "react-icons/bi";
+import { BiBook, BiMessageSquareDetail, BiBookmarkHeart } from "react-icons/bi";
+import { MdOutlineReviews } from "react-icons/md";
 
 export default function Navbar() {
   const [activeNav, setActiveNav] = useState("#root");
@@ -42,6 +43,9 @@ export default function Navbar() {
         className={activeNav === "#contact" ? "active" : ""}
       >
         <BiMessageSquareDetail />
+      </a>
+      <a href="/reviews">
+        <MdOutlineReviews />
       </a>
     </nav>
   );

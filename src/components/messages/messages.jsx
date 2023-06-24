@@ -15,19 +15,20 @@ async function postNewReview(data) {
     data,
     config
   );
-  console.log(response);
+  console.log(response.data);
 }
 
-async function getReviews() {
-    const response = await axios.get("http://localhost:3001/reviews", config);
-    console.log(response);
+async function getReviews(data) {
+  const response = await axios.get("http://localhost:3001/reviews", config);
+  data.push(response.data);
 }
 
 export default function Messages() {
+  let data = [];
+  getReviews(data);
   const {
     register,
     handleSubmit,
-    formState: { errors },
   } = useForm();
   const reviewSubmit = (data) => {
     if (!data.review) return;
@@ -36,7 +37,16 @@ export default function Messages() {
   return (
     <>
       <section className="messages">
-        <div className="message"></div>
+        <div className="message">
+          {
+            data.forEach((data, index) => {
+              <div key={index} id="dt">
+                email: {data.email},<br />
+                message: {data.message}
+              </div>
+            })
+          }
+        </div>
       </section>
       <section id="review">
         <h2 className="title">Review</h2>
@@ -48,19 +58,10 @@ export default function Messages() {
                 type="text"
                 name="name"
                 id="name"
+                required
                 placeholder="Name"
-                {...register("name", {
-                  required: "Your name is required",
-                  validate: {
-                    checkLength: (value) => value.length >= 3,
-                  },
-                })}
+                {...register("name")}
               />
-              {errors.name?.type === "checkLength" && (
-                <small className="errorMsg">
-                  Name should be at-least 3 characters.
-                </small>
-              )}
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -69,17 +70,8 @@ export default function Messages() {
                 name="email"
                 id="email"
                 placeholder="Email"
-                {...register("email", {
-                  required: "Email is required.",
-                  pattern: {
-                    value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                    message: "Email is not valid.",
-                  },
-                })}
+                {...register("email")}
               />
-              {errors.email && (
-                <small className="errorMsg">{errors.email.message}</small>
-              )}
             </div>
             <div className="form-group">
               <label htmlFor="review">Review</label>
@@ -92,7 +84,6 @@ export default function Messages() {
                 rows="10"
                 {...register("review")}
               />
-              <small className="errorMsg"></small>
             </div>
             <button type="submit" className="btn btn-primary">
               Send Review
