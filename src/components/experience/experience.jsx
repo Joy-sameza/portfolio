@@ -1,6 +1,73 @@
 import React from 'react';
 import "./experience.css";
-import {BsPatchCheckFill} from "react-icons/bs";
+import { BsPatchCheckFill } from "react-icons/bs";
+
+/**
+ * 
+ * @param {string} name Name of the skill (article)
+ * @param {string} level The level of the skill
+ */
+function generateArticle(name, level) {
+  return (
+    <article className="experience__details">
+      <BsPatchCheckFill className="experience__details-icon" />
+      <div>
+        <h4>{name}</h4>
+        <small className='text-light'>{level}</small>
+      </div>
+    </article>
+  );
+}
+
+const frontendSkills = [{
+  name: 'HTML',
+  level: "Experienced"
+}, {
+  name: "CSS",
+  level: "Intermediate"
+}, {
+  name: "JavaScript",
+  level: "Experienced"
+}, {
+  name: "Bootstrap",
+  level: "Experienced"
+}, {
+  name: "Tailwind",
+  level: "Experienced"
+}, {
+  name: "ReactJS",
+  level: "Experienced"
+}];
+
+const backendSkills = [
+  {
+    name: "Node",
+    level: "Experienced"
+  },
+  {
+    name: "Python",
+    level: "Intermediate"
+  },
+  {
+    name: "MongoDB",
+    level: "Intermediate"
+  },
+  {
+    name: "MySQL",
+    level: "Intermediate"
+  },
+  {
+    name: "PHP",
+    level: "Experienced"
+  },
+  {
+    name: "Flutter",
+    level: "Intermediate"
+  },
+];
+
+const frontendContent = frontendSkills.map((skill) => generateArticle(skill.name, skill.level));
+const backendContent = backendSkills.map((skill) => generateArticle(skill.name, skill.level));
 
 export default function Experience() {
   return (
@@ -12,7 +79,8 @@ export default function Experience() {
         <div className="experience__frontend">
           <h3>Frontend Development</h3>
           <div className="experience__content">
-            <article className="experience__details">
+            {...frontendContent}
+            {/* <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>HTML</h4>
@@ -53,16 +121,17 @@ export default function Experience() {
                 <h4>ReactJs</h4>
                 <small className='text-light'>Experienced</small>
               </div>
-            </article>
+            </article> */}
           </div>
         </div>
-        
+
         {/* End of frntend section */}
 
         <div className="experience__backend">
           <h3>Backend Development</h3>
           <div className="experience__content">
-            <article className="experience__details">
+            {...backendContent}
+            {/* <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
                 <h4>NodeJs</h4>
@@ -89,7 +158,7 @@ export default function Experience() {
                 <h4>PHP</h4>
                 <small className='text-light'>Basic</small>
               </div>
-            </article>
+            </article> */}
           </div>
         </div>
       </div>
