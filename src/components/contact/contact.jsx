@@ -42,7 +42,7 @@ const Contact = () => {
             <h4>LinkedIn</h4>
             <h5>Profile</h5>
             <a
-              href="https://www.linkedin.com/in/brown-djomo-844b96164/"
+              href="https://www.linkedin.com/in/joysameza/"
               target="blank"
             >
               Tape me on LinkedIn
