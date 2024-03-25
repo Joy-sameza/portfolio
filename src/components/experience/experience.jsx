@@ -79,7 +79,7 @@ export default function Experience() {
         <div className="experience__frontend">
           <h3>Frontend Development</h3>
           <div className="experience__content">
-            {...frontendContent}
+            {frontendContent}
             {/* <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
@@ -130,7 +130,7 @@ export default function Experience() {
         <div className="experience__backend">
           <h3>Backend Development</h3>
           <div className="experience__content">
-            {...backendContent}
+            {backendContent}
             {/* <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
               <div>
