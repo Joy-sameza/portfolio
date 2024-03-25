@@ -6,7 +6,7 @@ import { CgTwitter } from "react-icons/cg";
 const HeaderSocial = () => {
   return (
     <div className="header__social">
-      <a href="https://linkedin.com" target="blank">
+      <a href="https://linkedin.com/in/joysameza" target="blank">
         <BsLinkedin />
       </a>
       <a href="https://github.com/Joy-sameza" target="blank">
@@ -15,7 +15,7 @@ const HeaderSocial = () => {
       <a href="https://facebook.com" target="blank">
         <FaFacebookF />
       </a>
-      <a href="https://twitter.com" target="blank">
+      <a href="https://twitter.com/joysameza" target="blank">
         <CgTwitter />
       </a>
     </div>
